@@ -13,9 +13,9 @@ if memo_type == 1
   #csvファイルを作成
   folder_name = gets.chomp #改行が入らないように
   puts "メモしたい内容を入力してください"
-  Text = gets.chomp #改行が入らないように
+  text = gets.chomp #改行が入らないように
   CSV.open("#{folder_name}.csv", 'w') do |f| #csvファイルを作成 新規はwモード
-    f << [Text]
+    f << [text]
   end
   puts "#{folder_name}.csvを作成しました。終了する場合にはctrl+cを押してください" #終了
   end
